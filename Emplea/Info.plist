@@ -11,6 +11,7 @@
 		<string>Sk-Modernist-Bold.otf</string>
 		<string>Sk-Modernist-Mono.otf</string>
 		<string>Sk-Modernist-Regular.otf</string>
+		<string>Poppins-Regular.ttf</string>
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>

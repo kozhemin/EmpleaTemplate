@@ -74,7 +74,7 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureView()
+        self.configureView()
         self.addSubviews()
         self.setupConstraints()
     }

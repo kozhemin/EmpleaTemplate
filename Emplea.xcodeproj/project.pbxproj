@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C780DA7AEACCFBB98B80A23 /* Pods_Emplea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E728B9518501F4CF207969 /* Pods_Emplea.framework */; };
+		97408AEB273DCFFB00686B05 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97408AEA273DCFDB00686B05 /* Poppins-Regular.ttf */; };
 		9782A99F2737238700CF6410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782A99E2737238700CF6410 /* AppDelegate.swift */; };
 		9782A9A12737238700CF6410 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782A9A02737238700CF6410 /* SceneDelegate.swift */; };
 		9782A9A32737238700CF6410 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9782A9A22737238700CF6410 /* RootController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		5B4227F6D24B93750B21CE2B /* Pods-Emplea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.debug.xcconfig"; path = "Target Support Files/Pods-Emplea/Pods-Emplea.debug.xcconfig"; sourceTree = "<group>"; };
 		6E2B4DFD9325013BB3D72498 /* Pods-Emplea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emplea.release.xcconfig"; path = "Target Support Files/Pods-Emplea/Pods-Emplea.release.xcconfig"; sourceTree = "<group>"; };
+		97408AEA273DCFDB00686B05 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		9782A99B2737238700CF6410 /* Emplea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emplea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9782A99E2737238700CF6410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9782A9A02737238700CF6410 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		97FA158B2737327B004F06D3 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				97408AEA273DCFDB00686B05 /* Poppins-Regular.ttf */,
 				97FA158C27373293004F06D3 /* Sk-Modernist-Bold.otf */,
 				97FA158D27373293004F06D3 /* Sk-Modernist-Mono.otf */,
 				97FA158E27373293004F06D3 /* Sk-Modernist-Regular.otf */,
@@ -193,6 +196,7 @@
 				97FA159127373446004F06D3 /* Sk-Modernist-Regular.otf in Resources */,
 				9782A9AB2737238B00CF6410 /* LaunchScreen.storyboard in Resources */,
 				97FA158F2737343E004F06D3 /* Sk-Modernist-Bold.otf in Resources */,
+				97408AEB273DCFFB00686B05 /* Poppins-Regular.ttf in Resources */,
 				97FA159027373444004F06D3 /* Sk-Modernist-Mono.otf in Resources */,
 				9782A9A82737238B00CF6410 /* Assets.xcassets in Resources */,
 			);

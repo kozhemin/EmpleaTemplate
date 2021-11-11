@@ -191,7 +191,7 @@ class ProfessionalViewController: UIViewController {
         guard let window = UIApplication.shared.keyWindow else { return }
         window.rootViewController = rootNC
         
-        configureView()
+        self.configureView()
         self.addSubviews()
         self.setupConstraints()
     }
@@ -276,12 +276,7 @@ class ProfessionalViewController: UIViewController {
         
     @objc
     private func presentEmployeeController(sender: UIButton) {
-
-  
-        
         let employeelVC = EmployeeViewController()
         navigationController?.pushViewController(employeelVC, animated: true)
-        print("Tapped arrow")
     }
-    
 }
