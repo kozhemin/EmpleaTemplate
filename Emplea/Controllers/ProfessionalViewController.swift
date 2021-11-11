@@ -5,14 +5,13 @@
 //  Created by Егор Кожемин on 07.11.2021.
 //
 
-import UIKit
 import PureLayout
+import UIKit
 
 class ProfessionalViewController: UIViewController {
-   
-    let scrollView  = UIScrollView.newAutoLayout()
+    let scrollView = UIScrollView.newAutoLayout()
     let contentView = UIView.newAutoLayout()
-    
+
     lazy var burgerImage: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "burger-line")
@@ -21,7 +20,7 @@ class ProfessionalViewController: UIViewController {
         img.autoSetDimension(.height, toSize: 32)
         return img
     }()
-    
+
     lazy var bellImage: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "notification-bell")
@@ -30,14 +29,14 @@ class ProfessionalViewController: UIViewController {
         img.autoSetDimension(.height, toSize: 40)
         return img
     }()
-    
+
     lazy var topFiveImage: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "top-5")
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     lazy var topLabelHeader: UILabel = {
         let label = UILabel().configureForAutoLayout()
         label.frame = CGRect(x: 0, y: 0, width: 230, height: 86)
@@ -49,28 +48,28 @@ class ProfessionalViewController: UIViewController {
         label.text = "Busca\nProfesionales"
         return label
     }()
-    
+
     lazy var people1Image: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "people-1")
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     lazy var people2Image: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "people-2")
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     lazy var people3Image: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "people-3")
         img.contentMode = .scaleAspectFit
         return img
     }()
-    
+
     lazy var arrowBtn: UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named: "arrow"), for: .normal)
@@ -80,16 +79,16 @@ class ProfessionalViewController: UIViewController {
         btn.addTarget(self, action: #selector(presentEmployeeController), for: .touchUpInside)
         return btn
     }()
-    
+
     lazy var yellowRectangle: UIView = {
         let view = UIView().configureForAutoLayout()
         view.autoSetDimension(.width, toSize: 320)
         view.autoSetDimension(.height, toSize: 360)
         view.backgroundColor = UIColor(red: 1, green: 0.973, blue: 0.906, alpha: 0.48)
         view.clip(cornerRadius: 60, borderWidth: 1, borderColor: UIColor(red: 1, green: 0.973, blue: 0.906, alpha: 1).cgColor)
-        
-        //todo: add shadow
-        
+
+        // TODO: add shadow
+
         // label
         let empleosLabel = UILabel().configureForAutoLayout()
         empleosLabel.frame = CGRect(x: 0, y: 0, width: 252, height: 32)
@@ -100,7 +99,7 @@ class ProfessionalViewController: UIViewController {
         view.addSubview(empleosLabel)
         empleosLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 30)
         empleosLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 30)
-        
+
         // description
         var descriptionTextLabel = UILabel().configureForAutoLayout()
         descriptionTextLabel.frame = CGRect(x: 0, y: 0, width: 255, height: 72)
@@ -114,16 +113,17 @@ class ProfessionalViewController: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.21
         descriptionTextLabel.attributedText = NSMutableAttributedString(
             string: "Una comunidad virtual de vecinas y vecinos que ofrecen y buscan empleo.",
-            attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+            attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        )
         view.addSubview(descriptionTextLabel)
-        
+
         descriptionTextLabel.autoPinEdge(.top, to: .bottom, of: empleosLabel, withOffset: 10.0)
         descriptionTextLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 30)
         descriptionTextLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 30)
- 
+
         return view
     }()
-    
+
     lazy var yellowRectImage: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "yellowRectImage")
@@ -132,14 +132,14 @@ class ProfessionalViewController: UIViewController {
         img.autoSetDimension(.height, toSize: 226)
         return img
     }()
-    
+
     lazy var pinkRectangle: UIView = {
         let view = UIView().configureForAutoLayout()
         view.autoSetDimension(.width, toSize: 320)
         view.autoSetDimension(.height, toSize: 360)
         view.backgroundColor = UIColor(red: 1, green: 0.946, blue: 0.946, alpha: 1)
         view.clip(cornerRadius: 60, borderWidth: 1, borderColor: UIColor(red: 1, green: 0.946, blue: 0.946, alpha: 1).cgColor)
-        
+
         // label
         let empleosLabel = UILabel().configureForAutoLayout()
         empleosLabel.frame = CGRect(x: 0, y: 0, width: 252, height: 32)
@@ -150,7 +150,7 @@ class ProfessionalViewController: UIViewController {
         view.addSubview(empleosLabel)
         empleosLabel.autoPinEdge(toSuperviewEdge: .top, withInset: 30)
         empleosLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 30)
-        
+
         // description
         var descriptionTextLabel = UILabel().configureForAutoLayout()
         descriptionTextLabel.frame = CGRect(x: 0, y: 0, width: 255, height: 72)
@@ -164,16 +164,17 @@ class ProfessionalViewController: UIViewController {
         paragraphStyle.lineHeightMultiple = 1.21
         descriptionTextLabel.attributedText = NSMutableAttributedString(
             string: "Y contrata a miles de profesionales, técnicos y oficios en Peñalolén.",
-            attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+            attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]
+        )
         view.addSubview(descriptionTextLabel)
-        
+
         descriptionTextLabel.autoPinEdge(.top, to: .bottom, of: empleosLabel, withOffset: 10.0)
         descriptionTextLabel.autoPinEdge(toSuperviewEdge: .leading, withInset: 30)
         descriptionTextLabel.autoPinEdge(toSuperviewEdge: .trailing, withInset: 30)
-        
+
         return view
     }()
-    
+
     lazy var pinkRectImage: UIImageView = {
         let img = UIImageView().configureForAutoLayout()
         img.image = UIImage(named: "pinkRectImage")
@@ -182,7 +183,7 @@ class ProfessionalViewController: UIViewController {
         img.autoSetDimension(.height, toSize: 260)
         return img
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -190,16 +191,16 @@ class ProfessionalViewController: UIViewController {
         let rootNC = UINavigationController(rootViewController: self)
         guard let window = UIApplication.shared.keyWindow else { return }
         window.rootViewController = rootNC
-        
-        self.configureView()
-        self.addSubviews()
-        self.setupConstraints()
+
+        configureView()
+        addSubviews()
+        setupConstraints()
     }
-    
+
     private func addSubviews() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        
+
         contentView.addSubview(bellImage)
         contentView.addSubview(burgerImage)
         contentView.addSubview(topFiveImage)
@@ -216,17 +217,17 @@ class ProfessionalViewController: UIViewController {
         contentView.addSubview(pinkRectImage)
         view.setNeedsUpdateConstraints()
     }
-    
+
     private func setupConstraints() {
         let widthInset = 20.0
-        
+
         scrollView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
         scrollView.alwaysBounceVertical = true
         scrollView.contentInsetAdjustmentBehavior = .never // ignire safeare
-        
+
         contentView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0))
         contentView.autoMatch(.width, to: .width, of: view)
-        
+
         burgerImage.autoPinEdge(toSuperviewEdge: .top, withInset: 5)
         burgerImage.autoPinEdge(toSuperviewEdge: .right, withInset: widthInset)
 
@@ -253,29 +254,29 @@ class ProfessionalViewController: UIViewController {
 
         yellowRectangle.autoPinEdge(.top, to: .bottom, of: people3Image, withOffset: 25)
         yellowRectangle.autoAlignAxis(toSuperviewAxis: .vertical)
-       
+
         yellowRectImage.autoPinEdge(.bottom, to: .bottom, of: yellowRectangle, withOffset: 20)
         yellowRectImage.autoPinEdge(.right, to: .right, of: yellowRectangle)
-        
+
         pinkRectangle.autoPinEdge(.top, to: .bottom, of: yellowRectImage, withOffset: 30)
         pinkRectangle.autoAlignAxis(toSuperviewAxis: .vertical)
-        
+
         pinkRectImage.autoPinEdge(.bottom, to: .bottom, of: pinkRectangle, withOffset: 20)
         pinkRectImage.autoPinEdge(.right, to: .right, of: pinkRectangle)
-        
+
         pinkRectangle.autoPinEdge(toSuperviewEdge: .bottom, withInset: 1) // !
     }
-    
+
     private func configureView() {
-        self.view.backgroundColor = .white
+        view.backgroundColor = .white
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "home-bg")
         backgroundImage.contentMode = .scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+        view.insertSubview(backgroundImage, at: 0)
     }
-        
+
     @objc
-    private func presentEmployeeController(sender: UIButton) {
+    private func presentEmployeeController(sender _: UIButton) {
         let employeelVC = EmployeeViewController()
         navigationController?.pushViewController(employeelVC, animated: true)
     }

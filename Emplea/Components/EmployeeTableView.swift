@@ -8,12 +8,9 @@
 import UIKit
 
 class EmployeeTableView: UITableView {
-
     var numberOfSections = 1
-     
-    override func numberOfRows(inSection section: Int) -> Int {
+
+    override func numberOfRows(inSection _: Int) -> Int {
         5
     }
-
-    
 }
