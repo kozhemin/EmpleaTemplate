@@ -4,6 +4,7 @@ Layout of the application template
 ## Features
 * Swift Programming Language
 * Design-driven development [💼 Emplea Vecino UI (Community)](https://www.figma.com/file/ZfNVWdotp7OHL1qOV8h8CN/%F0%9F%92%BC-Emplea-Vecino-UI-Community)
+* [PureLayout](https://github.com/PureLayout/PureLayout)
 
 ![EmpleaDemo app](https://github.com/kozhemin/EmpleaTemplate/blob/master/images/emplea-demo.gif?raw=true)
 
