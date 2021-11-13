@@ -184,6 +184,20 @@ class ProfessionalViewController: UIViewController {
         return img
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.tintColor = .lightGray
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationItem.title = "Professional"
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -223,9 +237,9 @@ class ProfessionalViewController: UIViewController {
 
         scrollView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
         scrollView.alwaysBounceVertical = true
-        scrollView.contentInsetAdjustmentBehavior = .never // ignire safeare
+//        scrollView.contentInsetAdjustmentBehavior = .never // ignire safeare
 
-        contentView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0))
+        contentView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0))
         contentView.autoMatch(.width, to: .width, of: view)
 
         burgerImage.autoPinEdge(toSuperviewEdge: .top, withInset: 5)
@@ -249,8 +263,8 @@ class ProfessionalViewController: UIViewController {
         people3Image.autoPinEdge(.top, to: .top, of: people2Image)
         people3Image.autoPinEdge(.left, to: .right, of: people2Image, withOffset: 10.0)
 
-        arrowBtn.autoPinEdge(.top, to: .top, of: people3Image)
-        arrowBtn.autoPinEdge(toSuperviewEdge: .right)
+        arrowBtn.autoPinEdge(toSuperviewEdge: .right, withInset: widthInset)
+        arrowBtn.autoAlignAxis(.horizontal, toSameAxisOf: people3Image)
 
         yellowRectangle.autoPinEdge(.top, to: .bottom, of: people3Image, withOffset: 25)
         yellowRectangle.autoAlignAxis(toSuperviewAxis: .vertical)

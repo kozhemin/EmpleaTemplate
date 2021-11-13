@@ -85,7 +85,8 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
+        navigationItem.title = "Employee"
+
         employeeTable.dataSource = self
         employeeTable.delegate = self
 
@@ -110,7 +111,7 @@ class EmployeeViewController: UIViewController, UITableViewDelegate, UITableView
         let widthInset = 20.0
         scrollView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
         scrollView.alwaysBounceVertical = true
-        scrollView.contentInsetAdjustmentBehavior = .never // ignire safeare
+//        scrollView.contentInsetAdjustmentBehavior = .never // ignire safeare
 
         contentView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
         contentView.autoMatch(.width, to: .width, of: view)
